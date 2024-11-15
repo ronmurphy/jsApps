@@ -474,35 +474,5 @@
         // Initialize with fun mode selected
         setGraphicsMode('fun');
     </script>
-<script>
-(function() {
-    var originalConsoleError = console.error;
-    console.error = function() {
-        window.parent.postMessage({
-            type: 'error',
-            message: Array.from(arguments).join(' ')
-        }, '*');
-        originalConsoleError.apply(console, arguments);
-    };
-
-    window.addEventListener('error', function(event) {
-        window.parent.postMessage({
-            type: 'error',
-            message: event.message,
-            source: event.filename,
-            lineno: event.lineno,
-            colno: event.colno,
-            error: event.error ? event.error.stack : null
-        }, '*');
-    });
-
-    window.addEventListener('unhandledrejection', function(event) {
-        window.parent.postMessage({
-            type: 'error',
-            message: 'Unhandled Promise Rejection: ' + event.reason,
-            error: event.reason ? event.reason.stack : null
-        }, '*');
-    });
-})();
-</script></body>
+</body>
 </html>
