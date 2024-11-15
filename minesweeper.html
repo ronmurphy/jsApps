@@ -1,4 +1,5 @@
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood Minesweeper</title>
@@ -105,25 +106,26 @@
             }
         }
     </style>
+</head>
 <body>
-    <div id="startMenu" style="display: none;">
+    <div id="startMenu">
         <h1>Mood Minesweeper</h1>
         <div id="modeSelect">
-            <button class="mode-btn" onclick="setGraphicsMode('fun')" style="background: rgb(76, 175, 80);">Fun Mode 🎨</button>
-            <button class="mode-btn" onclick="setGraphicsMode('boring')" style="background: rgb(221, 221, 221);">Boring Mode 🎯</button>
+            <button class="mode-btn" onclick="setGraphicsMode('fun')">Fun Mode 🎨</button>
+            <button class="mode-btn" onclick="setGraphicsMode('boring')">Boring Mode 🎯</button>
         </div>
         <p>Click cells to reveal them. Right-click or use flag mode to mark potential mines.</p>
-        <button class="mode-btn" onclick="startGame()" style="background: rgb(221, 221, 221);">Ready!</button>
+        <button class="mode-btn" onclick="startGame()">Ready!</button>
     </div>
 
-    <div id="gameContainer" style="display: block;">
+    <div id="gameContainer">
         <div id="controls">
-            <div id="mineCount" style="cursor: pointer">💣 15</div>
+            <div id="mineCount" style="cursor: pointer">💣 0</div>
             <button id="flagMode">🚩 Mode: Dig</button>
             <div id="timer">⏱️ 0</div>
             <button id="graphicsToggle">🎨</button>
         </div>
-        <div id="grid" style="grid-template-columns: repeat(10, var(--cell-size));"><button class="cell" data-x="0" data-y="0">🟦</button><button class="cell" data-x="1" data-y="0">🟦</button><button class="cell" data-x="2" data-y="0">🟦</button><button class="cell" data-x="3" data-y="0">🟦</button><button class="cell" data-x="4" data-y="0">🟦</button><button class="cell" data-x="5" data-y="0">🟦</button><button class="cell" data-x="6" data-y="0">🟦</button><button class="cell" data-x="7" data-y="0">🟦</button><button class="cell" data-x="8" data-y="0">🟦</button><button class="cell" data-x="9" data-y="0">🟦</button><button class="cell" data-x="0" data-y="1">🟦</button><button class="cell" data-x="1" data-y="1">🟦</button><button class="cell" data-x="2" data-y="1">🟦</button><button class="cell" data-x="3" data-y="1">🟦</button><button class="cell" data-x="4" data-y="1">🟦</button><button class="cell" data-x="5" data-y="1">🟦</button><button class="cell" data-x="6" data-y="1">🟦</button><button class="cell" data-x="7" data-y="1">🟦</button><button class="cell" data-x="8" data-y="1">🟦</button><button class="cell" data-x="9" data-y="1">🟦</button><button class="cell" data-x="0" data-y="2">🟦</button><button class="cell" data-x="1" data-y="2">🟦</button><button class="cell" data-x="2" data-y="2">🟦</button><button class="cell" data-x="3" data-y="2">🟦</button><button class="cell" data-x="4" data-y="2">🟦</button><button class="cell" data-x="5" data-y="2">🟦</button><button class="cell" data-x="6" data-y="2">🟦</button><button class="cell" data-x="7" data-y="2">🟦</button><button class="cell" data-x="8" data-y="2">🟦</button><button class="cell" data-x="9" data-y="2">🟦</button><button class="cell" data-x="0" data-y="3">🟦</button><button class="cell" data-x="1" data-y="3">🟦</button><button class="cell" data-x="2" data-y="3">🟦</button><button class="cell" data-x="3" data-y="3">🟦</button><button class="cell" data-x="4" data-y="3">🟦</button><button class="cell" data-x="5" data-y="3">🟦</button><button class="cell" data-x="6" data-y="3">🟦</button><button class="cell" data-x="7" data-y="3">🟦</button><button class="cell" data-x="8" data-y="3">🟦</button><button class="cell" data-x="9" data-y="3">🟦</button><button class="cell" data-x="0" data-y="4">🟦</button><button class="cell" data-x="1" data-y="4">🟦</button><button class="cell" data-x="2" data-y="4">🟦</button><button class="cell" data-x="3" data-y="4">🟦</button><button class="cell" data-x="4" data-y="4">🟦</button><button class="cell" data-x="5" data-y="4">🟦</button><button class="cell" data-x="6" data-y="4">🟦</button><button class="cell" data-x="7" data-y="4">🟦</button><button class="cell" data-x="8" data-y="4">🟦</button><button class="cell" data-x="9" data-y="4">🟦</button><button class="cell" data-x="0" data-y="5">🟦</button><button class="cell" data-x="1" data-y="5">🟦</button><button class="cell" data-x="2" data-y="5">🟦</button><button class="cell" data-x="3" data-y="5">🟦</button><button class="cell" data-x="4" data-y="5">🟦</button><button class="cell" data-x="5" data-y="5">🟦</button><button class="cell" data-x="6" data-y="5">🟦</button><button class="cell" data-x="7" data-y="5">🟦</button><button class="cell" data-x="8" data-y="5">🟦</button><button class="cell" data-x="9" data-y="5">🟦</button><button class="cell" data-x="0" data-y="6">🟦</button><button class="cell" data-x="1" data-y="6">🟦</button><button class="cell" data-x="2" data-y="6">🟦</button><button class="cell" data-x="3" data-y="6">🟦</button><button class="cell" data-x="4" data-y="6">🟦</button><button class="cell" data-x="5" data-y="6">🟦</button><button class="cell" data-x="6" data-y="6">🟦</button><button class="cell" data-x="7" data-y="6">🟦</button><button class="cell" data-x="8" data-y="6">🟦</button><button class="cell" data-x="9" data-y="6">🟦</button><button class="cell" data-x="0" data-y="7">🟦</button><button class="cell" data-x="1" data-y="7">🟦</button><button class="cell" data-x="2" data-y="7">🟦</button><button class="cell" data-x="3" data-y="7">🟦</button><button class="cell" data-x="4" data-y="7">🟦</button><button class="cell" data-x="5" data-y="7">🟦</button><button class="cell" data-x="6" data-y="7">🟦</button><button class="cell" data-x="7" data-y="7">🟦</button><button class="cell" data-x="8" data-y="7">🟦</button><button class="cell" data-x="9" data-y="7">🟦</button><button class="cell" data-x="0" data-y="8">🟦</button><button class="cell" data-x="1" data-y="8">🟦</button><button class="cell" data-x="2" data-y="8">🟦</button><button class="cell" data-x="3" data-y="8">🟦</button><button class="cell" data-x="4" data-y="8">🟦</button><button class="cell" data-x="5" data-y="8">🟦</button><button class="cell" data-x="6" data-y="8">🟦</button><button class="cell" data-x="7" data-y="8">🟦</button><button class="cell" data-x="8" data-y="8">🟦</button><button class="cell" data-x="9" data-y="8">🟦</button><button class="cell" data-x="0" data-y="9">🟦</button><button class="cell" data-x="1" data-y="9">🟦</button><button class="cell" data-x="2" data-y="9">🟦</button><button class="cell" data-x="3" data-y="9">🟦</button><button class="cell" data-x="4" data-y="9">🟦</button><button class="cell" data-x="5" data-y="9">🟦</button><button class="cell" data-x="6" data-y="9">🟦</button><button class="cell" data-x="7" data-y="9">🟦</button><button class="cell" data-x="8" data-y="9">🟦</button><button class="cell" data-x="9" data-y="9">🟦</button></div>
+        <div id="grid"></div>
     </div>
 
     <script>
@@ -471,27 +473,36 @@
 
         // Initialize with fun mode selected
         setGraphicsMode('fun');
- 
+    </script>
+<script>
+(function() {
+    var originalConsoleError = console.error;
+    console.error = function() {
+        window.parent.postMessage({
+            type: 'error',
+            message: Array.from(arguments).join(' ')
+        }, '*');
+        originalConsoleError.apply(console, arguments);
+    };
 
-                        let lastTouchEnd = 0;
+    window.addEventListener('error', function(event) {
+        window.parent.postMessage({
+            type: 'error',
+            message: event.message,
+            source: event.filename,
+            lineno: event.lineno,
+            colno: event.colno,
+            error: event.error ? event.error.stack : null
+        }, '*');
+    });
 
-                        document.addEventListener('touchstart', function(e) {
-                            if (e.touches.length > 1) {
-                                e.preventDefault();
-                            }
-                        }, { passive: false });
-
-                        document.addEventListener('touchend', function(e) {
-                            const now = (new Date()).getTime();
-                            if (now - lastTouchEnd <= 300) {
-                                e.preventDefault();
-                            }
-                            lastTouchEnd = now;
-                        }, false);
-
-                        document.addEventListener('touchmove', function(e) {
-                            if (e.touches.length > 1) {
-                                e.preventDefault();
-                            }
-                        }, { passive: false });
-                    </script></body></html>
+    window.addEventListener('unhandledrejection', function(event) {
+        window.parent.postMessage({
+            type: 'error',
+            message: 'Unhandled Promise Rejection: ' + event.reason,
+            error: event.reason ? event.reason.stack : null
+        }, '*');
+    });
+})();
+</script></body>
+</html>
